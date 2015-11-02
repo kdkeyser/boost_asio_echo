@@ -14,16 +14,14 @@
 #include <boost/shared_ptr.hpp>
 #include <vector>
 
-namespace http {
-namespace server3 {
+namespace echo {
+namespace server {
 
-server::server(const std::string& address, const std::string& port,
-    const std::string& doc_root, std::size_t thread_pool_size)
+server::server(const std::string& address, const std::string& port, std::size_t thread_pool_size)
   : thread_pool_size_(thread_pool_size),
     signals_(io_service_),
     acceptor_(io_service_),
-    new_connection_(),
-    request_handler_(doc_root)
+    new_connection_()
 {
   // Register to handle the signals that indicate when the server should exit.
   // It is safe to register for the same signal multiple times in a program,
@@ -65,7 +63,7 @@ void server::run()
 
 void server::start_accept()
 {
-  new_connection_.reset(new connection(io_service_, request_handler_));
+  new_connection_.reset(new connection(io_service_));
   acceptor_.async_accept(new_connection_->socket(),
       boost::bind(&server::handle_accept, this,
         boost::asio::placeholders::error));
@@ -86,5 +84,5 @@ void server::handle_stop()
   io_service_.stop();
 }
 
-} // namespace server3
-} // namespace http
+}
+}

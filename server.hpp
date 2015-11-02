@@ -17,10 +17,9 @@
 #include <boost/noncopyable.hpp>
 #include <boost/shared_ptr.hpp>
 #include "connection.hpp"
-#include "request_handler.hpp"
 
-namespace http {
-namespace server3 {
+namespace echo {
+namespace server {
 
 /// The top-level class of the HTTP server.
 class server
@@ -29,8 +28,7 @@ class server
 public:
   /// Construct the server to listen on the specified TCP address and port, and
   /// serve up files from the given directory.
-  explicit server(const std::string& address, const std::string& port,
-      const std::string& doc_root, std::size_t thread_pool_size);
+  explicit server(const std::string& address, const std::string& port, std::size_t thread_pool_size);
 
   /// Run the server's io_service loop.
   void run();
@@ -59,12 +57,9 @@ private:
 
   /// The next connection to be accepted.
   connection_ptr new_connection_;
-
-  /// The handler for all incoming requests.
-  request_handler request_handler_;
 };
 
-} // namespace server3
-} // namespace http
+}
+}
 
-#endif // HTTP_SERVER3_SERVER_HPP
+#endif

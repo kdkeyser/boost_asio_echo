@@ -39,8 +39,6 @@ OBJECTFILES= \
 	${OBJECTDIR}/main.o \
 	${OBJECTDIR}/mime_types.o \
 	${OBJECTDIR}/reply.o \
-	${OBJECTDIR}/request_handler.o \
-	${OBJECTDIR}/request_parser.o \
 	${OBJECTDIR}/server.o
 
 
@@ -87,16 +85,6 @@ ${OBJECTDIR}/reply.o: reply.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/reply.o reply.cpp
-
-${OBJECTDIR}/request_handler.o: request_handler.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/request_handler.o request_handler.cpp
-
-${OBJECTDIR}/request_parser.o: request_parser.cpp 
-	${MKDIR} -p ${OBJECTDIR}
-	${RM} "$@.d"
-	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/request_parser.o request_parser.cpp
 
 ${OBJECTDIR}/server.o: server.cpp 
 	${MKDIR} -p ${OBJECTDIR}

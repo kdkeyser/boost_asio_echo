@@ -22,10 +22,6 @@
       <itemPath>reply.cpp</itemPath>
       <itemPath>reply.hpp</itemPath>
       <itemPath>request.hpp</itemPath>
-      <itemPath>request_handler.cpp</itemPath>
-      <itemPath>request_handler.hpp</itemPath>
-      <itemPath>request_parser.cpp</itemPath>
-      <itemPath>request_parser.hpp</itemPath>
       <itemPath>server.cpp</itemPath>
       <itemPath>server.hpp</itemPath>
     </logicalFolder>
@@ -78,14 +74,6 @@
       </item>
       <item path="request.hpp" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="request_handler.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="request_handler.hpp" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="request_parser.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="request_parser.hpp" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="server.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="server.hpp" ex="false" tool="3" flavor2="0">
@@ -130,14 +118,6 @@
       <item path="reply.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="request.hpp" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="request_handler.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="request_handler.hpp" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="request_parser.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="request_parser.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="server.cpp" ex="false" tool="1" flavor2="0">
       </item>

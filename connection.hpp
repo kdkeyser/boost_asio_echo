@@ -18,11 +18,9 @@
 #include <boost/enable_shared_from_this.hpp>
 #include "reply.hpp"
 #include "request.hpp"
-#include "request_handler.hpp"
-#include "request_parser.hpp"
 
-namespace http {
-namespace server3 {
+namespace echo {
+namespace server {
 
 /// Represents a single connection from a client.
 class connection
@@ -31,8 +29,7 @@ class connection
 {
 public:
   /// Construct a connection with the given io_service.
-  explicit connection(boost::asio::io_service& io_service,
-      request_handler& handler);
+  explicit connection(boost::asio::io_service& io_service);
 
   /// Get the socket associated with the connection.
   boost::asio::ip::tcp::socket& socket();
@@ -54,17 +51,11 @@ private:
   /// Socket for the connection.
   boost::asio::ip::tcp::socket socket_;
 
-  /// The handler used to process the incoming request.
-  request_handler& request_handler_;
-
   /// Buffer for incoming data.
   boost::array<char, 8192> buffer_;
 
   /// The incoming request.
   request request_;
-
-  /// The parser for the incoming request.
-  request_parser request_parser_;
 
   /// The reply to be sent back to the client.
   reply reply_;
@@ -72,7 +63,7 @@ private:
 
 typedef boost::shared_ptr<connection> connection_ptr;
 
-} // namespace server3
-} // namespace http
+}
+}
 
-#endif // HTTP_SERVER3_CONNECTION_HPP
+#endif

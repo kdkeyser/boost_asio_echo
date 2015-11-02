@@ -13,8 +13,8 @@
 
 #include <string>
 
-namespace http {
-namespace server3 {
+namespace echo {
+namespace server {
 
 struct header
 {
