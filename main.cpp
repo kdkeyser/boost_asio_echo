@@ -20,7 +20,7 @@ int main(int argc, char* argv[])
   try
   {
     // Check command line arguments.
-    if (argc != 5)
+    if (argc != 4)
     {
       std::cerr << "Usage: echo_server <address> <port> <threads>\n";
       return 1;
