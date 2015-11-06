@@ -15,13 +15,7 @@
       <itemPath>Makefile</itemPath>
       <itemPath>connection.cpp</itemPath>
       <itemPath>connection.hpp</itemPath>
-      <itemPath>header.hpp</itemPath>
       <itemPath>main.cpp</itemPath>
-      <itemPath>mime_types.cpp</itemPath>
-      <itemPath>mime_types.hpp</itemPath>
-      <itemPath>reply.cpp</itemPath>
-      <itemPath>reply.hpp</itemPath>
-      <itemPath>request.hpp</itemPath>
       <itemPath>server.cpp</itemPath>
       <itemPath>server.hpp</itemPath>
     </logicalFolder>
@@ -60,19 +54,7 @@
       </item>
       <item path="connection.hpp" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="header.hpp" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="mime_types.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="mime_types.hpp" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="reply.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="reply.hpp" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="request.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="server.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -105,19 +87,7 @@
       </item>
       <item path="connection.hpp" ex="false" tool="3" flavor2="0">
       </item>
-      <item path="header.hpp" ex="false" tool="3" flavor2="0">
-      </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="mime_types.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="mime_types.hpp" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="reply.cpp" ex="false" tool="1" flavor2="0">
-      </item>
-      <item path="reply.hpp" ex="false" tool="3" flavor2="0">
-      </item>
-      <item path="request.hpp" ex="false" tool="3" flavor2="0">
       </item>
       <item path="server.cpp" ex="false" tool="1" flavor2="0">
       </item>

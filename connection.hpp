@@ -16,8 +16,6 @@
 #include <boost/noncopyable.hpp>
 #include <boost/shared_ptr.hpp>
 #include <boost/enable_shared_from_this.hpp>
-#include "reply.hpp"
-#include "request.hpp"
 
 namespace echo {
 namespace server {
@@ -53,12 +51,6 @@ private:
 
   /// Buffer for incoming data.
   boost::array<char, 8192> buffer_;
-
-  /// The incoming request.
-  request request_;
-
-  /// The reply to be sent back to the client.
-  reply reply_;
 };
 
 typedef boost::shared_ptr<connection> connection_ptr;
