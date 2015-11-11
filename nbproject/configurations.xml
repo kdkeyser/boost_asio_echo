@@ -49,7 +49,7 @@
           <linkerLibItems>
             <linkerLibLibItem>boost_system</linkerLibLibItem>
             <linkerLibStdlibItem>PosixThreads</linkerLibStdlibItem>
-            <linkerLibFileItem>/usr/lib/x86_64-linux-gnu/libboost_thread.so</linkerLibFileItem>
+            <linkerLibLibItem>boost_thread</linkerLibLibItem>
           </linkerLibItems>
         </linkerTool>
       </compileType>
@@ -90,6 +90,13 @@
         <asmTool>
           <developmentMode>5</developmentMode>
         </asmTool>
+        <linkerTool>
+          <linkerLibItems>
+            <linkerLibLibItem>boost_system</linkerLibLibItem>
+            <linkerLibStdlibItem>PosixThreads</linkerLibStdlibItem>
+            <linkerLibLibItem>boost_thread</linkerLibLibItem>
+          </linkerLibItems>
+        </linkerTool>
       </compileType>
       <item path="Makefile" ex="false" tool="3" flavor2="0">
       </item>

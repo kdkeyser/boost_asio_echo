@@ -55,13 +55,11 @@ FFLAGS=
 ASFLAGS=
 
 # Link Libraries and Options
-LDLIBSOPTIONS=-lboost_system -lpthread /usr/lib/x86_64-linux-gnu/libboost_thread.so
+LDLIBSOPTIONS=-lboost_system -lpthread -lboost_thread
 
 # Build Targets
 .build-conf: ${BUILD_SUBPROJECTS}
 	"${MAKE}"  -f nbproject/Makefile-${CND_CONF}.mk ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/boost_asio_echo
-
-${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/boost_asio_echo: /usr/lib/x86_64-linux-gnu/libboost_thread.so
 
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/boost_asio_echo: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
