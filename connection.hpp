@@ -11,6 +11,7 @@
 #ifndef HTTP_SERVER3_CONNECTION_HPP
 #define HTTP_SERVER3_CONNECTION_HPP
 
+#include "exit_matcher.h"
 #include <boost/asio.hpp>
 #include <boost/array.hpp>
 #include <boost/noncopyable.hpp>
@@ -34,6 +35,8 @@ public:
 
   /// Start the first asynchronous operation for the connection.
   void start();
+  
+  exit_matcher em;
 
 private:
   /// Handle completion of a read operation.

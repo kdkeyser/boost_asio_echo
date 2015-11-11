@@ -9,6 +9,7 @@
 //
 
 #include "connection.hpp"
+#include "exit_matcher.h"
 #include <vector>
 #include <boost/bind.hpp>
 #include <boost/logic/tribool.hpp>
@@ -18,7 +19,7 @@ namespace echo {
   namespace server {
 
     connection::connection(boost::asio::io_service& io_service)
-    : strand_(io_service), socket_(io_service) {
+    : strand_(io_service), socket_(io_service), em () {
     }
 
     boost::asio::ip::tcp::socket& connection::socket() {
@@ -36,6 +37,14 @@ namespace echo {
     void connection::handle_read(const boost::system::error_code& e,
             std::size_t bytes_transferred) {
       if (!e) {
+        /* Check if we got an exit command. */
+        if (em.try_match(buffer_, bytes_transferred)) {
+          std::cerr << "Saw exit: terminating connection" << std::endl;
+          socket_.close ();
+          
+          return;
+        }
+        
         /* Echo the data back */
         boost::asio::async_write(socket_, boost::asio::buffer(buffer_, bytes_transferred),
                 strand_.wrap(
